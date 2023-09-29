@@ -1,3 +1,4 @@
+import java.util.Scanner;
 public class Store {
     public static void main(String[] args) {
 
@@ -11,7 +12,10 @@ public class Store {
         inventory.listAllProduct();
 
 
-        int searchId = 1;
+
+        System.out.println("Enter Product Id to Search For: ");
+        Scanner scanner = new Scanner(System.in);
+        int searchId = scanner.nextInt();;
         Product foundProduct = inventory.findProductById(searchId);
         if (foundProduct != null) {
             System.out.println("Product with ID " + searchId + ": " );
@@ -20,12 +24,13 @@ public class Store {
             System.out.println("Product with ID " + searchId + " not found.");
         }
 
-
-        int removeId = 2;
+        System.out.println("Enter Product Id to Delete: ");
+        Scanner scanner1 = new Scanner(System.in);
+        int removeId = scanner1.nextInt();
         inventory.removeProduct(removeId);
         System.out.println("Removed Product with ID " + removeId + ".");
 
-
+        System.out.println("\nNew Inventory: ");
         inventory.listAllProduct();
     }
 }
