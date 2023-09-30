@@ -34,11 +34,11 @@ public class Store {
         /**
          * prompt the user for the method for the id
          */
-        System.out.println("Enter Product Id to Delete: ");
+        System.out.println("Enter Product Id to Buy: ");
         Scanner scanner1 = new Scanner(System.in);
-        int removeId = scanner1.nextInt();
-        inventory.removeProduct(removeId);
-        System.out.println("Removed Product with ID " + removeId + ".");
+        int buyId = scanner1.nextInt();
+        inventory.buyProduct(buyId);
+        System.out.println("Buy Product with ID " + buyId + ".");
 
         System.out.println("\nNew Inventory: ");
         inventory.listAllProduct();

@@ -20,7 +20,7 @@ class Inventory {
         products.add(product);
     }
 
-    public void removeProduct(int Id) {
+    public void buyProduct(int Id) {
         products.removeIf(product -> product.getId() == Id);
     }
 
